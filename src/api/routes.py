@@ -27,6 +27,6 @@ def register_routes(app: Flask):
     app.register_blueprint(documents, url_prefix="/api")
     app.register_blueprint(messages, url_prefix="/api")
 
-api = Blueprint("api", __name__)  
+app = Flask(__name__)
 
-register_routes(api)
+register_routes(app)
